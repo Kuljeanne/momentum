@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../src/favicon.ico" rel="shortcut icon">
+  <title>momentum</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="player" data-block="audio">
+      <div class="advanced-player">
+        <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+        </div>
+        <div class="player-info">
+          <div class="progress">
+            <div class="song-title">Aqua Caelestis</div>
+            <div class="progress-info">
+              <div class="timing">
+                <span class="current"></span>
+                <span class="length"></span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-length"></div>
+              </div>
+            </div>
+          </div>
+          <div class="volume">
+            <div class="volume-button volume-button_on"></div>
+            <div class="volume-slider">
+              <div class="volume-percentage"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="links" data-block="links">
+      <div class="links_btn">Links</div>
+      <form class="google_search"><input type="text" name="link" id="link"></form>
+      
+      <div class="sparrow links_container__hidden"></div>
+      <div class="links_container links_container__hidden">
+        <div class="wrapper">
+          <ul class="link-list">
+            <li class="opt-link"> <svg style="width: 20px;" class="icon-chrome-tab icon-favicon icon-svg"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 497.401 497.401">
+                <g>
+                  <path
+                    d="M478.742 154.382H320.714c28.366 21.765 47.111 55.717 47.111 94.307 0 30.63-14.345 56.386-30.933 79.445-28.322 39.41-95.817 168.878-95.817 168.878 2.567.043 5.026.388 7.636.388 137.341 0 248.69-111.348 248.69-248.69-.022-33.412-6.709-65.229-18.659-94.328z">
+                  </path>
+                  <path
+                    d="M248.172 129.619c54.402-.388 217.628-2.049 217.628-2.049C423.24 51.511 342.069 0 248.69 0 170.819 0 101.361 35.829 55.782 91.848l75.972 134.925c10.268-55.113 58.349-96.744 116.418-97.154z">
+                  </path>
+                  <path
+                    d="M248.668 367.825c-51.964 0-91.568-35.117-111.974-79.855-20.535-45.018-98.061-171.984-98.061-171.984C14.301 154.425 0 199.832 0 248.69c0 124.744 91.935 227.744 211.696 245.648l77.288-134.019c-12.641 4.615-26.101 7.506-40.316 7.506z">
+                  </path>
+                  <circle cx="248.668" cy="248.711" r="80.416"></circle>
+                </g>
+              </svg>
+              <a href="https://www.google.com/">Chrome Tab</a>
+            </li>
+            <li class="opt-link"><svg style="width: 20px;" class="icon-favicon icon-svg icon-apps"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path
+                  d="M3 3h6v6H3V3zm10 0h6v6h-6V3zm10 0h6v6h-6V3zM3 13h6v6H3v-6zm10 0h6v6h-6v-6zm10 0h6v6h-6v-6zM3 23h6v6H3v-6zm10 0h6v6h-6v-6zm10 0h6v6h-6v-6z">
+                </path>
+              </svg> <a
+                href="https://chrome.google.com/webstore/category/extensions?utm_source=chrome-ntp-icon">Apps</a>
+            </li>
+
+
+
+          </ul>
+          <div class="create-link">+ New Link</div>
+        </div>
+        <form class="link-creation">
+          <div class="back"></div>
+          <label class="craete-link_label" for="link-name">Name</label>
+          <input class="create-link_input" type="text" name="link-name" id="link-name" required>
+          <label class="craete-link_label" for="link-url">Link</label>
+          <input class="create-link_input" type="text" name="link-url" id="link-url" required>
+          <button class="create-btn">Create</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="weather" data-block="weather">
+      <input type="text" class="city">
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <div data-block="time"><time class="time"></time></div>
+    <div data-block="date">
+      <date class="date"></date>
+    </div>
+    <div class="greeting-container" data-block="greeting">
+      <span class="greeting"></span>
+      <input type="text" class="name" placeholder="[Enter your name]">
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="settings">
+      <div class="settings-btn"></div>
+      <form class="settings-menu settings-menu__hidden">
+        <h4>Settings:</h4>
+        <div class="language">
+          <p class="language_title">Language:</p>
+          <div class="choose-lang">
+            <label for="en-lang">Eng<input type="radio" value="en" name="lang" id="en-lang" checked></label>
+            <label for="rus-lang">Ru<input type="radio" value="ru" name="lang" id="ru-lang"></label>
+          </div>
+        </div>
+        <div class="photo-source">
+          <p class="photo-source_title">Photo source:</p>
+          <div class="choose-photoSourse">
+            <label for="github">Github<input type="radio" value="github" name="photoSource" id="github"></label>
+            <label for="unsplash">Unsplash API<input type="radio" value="unsplash" name="photoSource"
+                id="unsplash"></label>
+            <label for="flickr">Flickr API<input type="radio" value="flickr" name="photoSource" id="flickr"></label>
+          </div>
+        </div>
+        <div class="choose-tag choose-tag__hidden">
+          <label class="tag_label" for="tag">Tags</label>
+          <input type="text" name="tag" id="tag">
+        </div>
+        <div class="shown-bloks">
+          <p class="shown-blocks_title">Show bloks:</p>
+          <div class="choose-shownBlocks">
+            <label class="time_label" for="time">Time</label><input type="checkbox" name="time" id="time" checked>
+            <label class="date_label" for="date">Date</label><input type="checkbox" name="date" id="date" checked>
+            <label class="greetings_label" for="greeting">Greeting</label><input type="checkbox" name="greeting"
+              id="greeting" checked>
+            <label class="quote_label" for="quote">Quote</label><input type="checkbox" name="quote" id="quote" checked>
+            <label class="weather_label" for="weather">Weather</label><input type="checkbox" name="weather" id="weather"
+              checked>
+            <label class="audio_label" for="audio">Audio-player</label><input type="checkbox" name="audio" id="audio"
+              checked>
+            <label class="link_label" for="link">Links</label><input type="checkbox" name="links" id="links" checked>
+          </div>
+        </div>
+        <button class="apply-btn">Apply</button>
+      </form>
+    </div>
+    <div class="quotes-wrapper" data-block="quote">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+    <div class="rights">
+      <div class="rights-links">
+        <a class="github-link" href="https://github.com/Kuljeanne"> GitHub</a>
+        <a class="rs-link" href="https://rs.school/js/"> RSschool</a>
+      </div>
+    </div>
+
+
+  </footer>
+</body>
+
+</html>
