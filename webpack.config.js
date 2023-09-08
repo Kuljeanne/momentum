@@ -1,7 +1,7 @@
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path"); // хранит относительные пути для каждого из файлов, помогает отрисовывать пути до наших файлов
-const Dotenv = require('dotenv-webpack');
+const Dotenv = require("dotenv-webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -34,7 +34,9 @@ module.exports = (env, options) => {
       ],
     },
     plugins: [
-      new Dotenv(),
+      new Dotenv({
+        path: "./.env.local",
+      }),
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: "index.html",
