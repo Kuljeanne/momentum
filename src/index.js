@@ -180,7 +180,7 @@ const weatherDescription = body.querySelector('.weather-description');
 const windSpeed = body.querySelector('.wind');
 const humidity = body.querySelector('.humidity');
 const cityName = body.querySelector('.city');
-cityName.value = 'Minsk'
+cityName.value = 'Moscow'
 
 window.addEventListener('beforeunload', setCityLocalStorage);
 window.addEventListener('load', getCityLocalStorage)
@@ -200,7 +200,7 @@ getWeather();
 
 async function getWeather() {
     getCityLocalStorage()
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName.value}&lang=${localStorage.getItem("lang")}&appid=6adf52378471885747632e28adc308bf&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName.value}&lang=${localStorage.getItem("lang")}&appid=${process.env.WEATHER_API_KEY}&units=metric`;
     const res = await fetch(url);
     const data = await res.json();
     const errorWeather = body.querySelector('.weather-error');
